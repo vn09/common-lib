@@ -6,6 +6,12 @@ module CommonData
 import           Data.Aeson.Types
 import           GHC.Generics
 
+data HelloMessage = HelloMessage
+    {
+        msg :: String
+    } deriving Generic
+instance ToJSON HelloMessage
+
 -- Data Handler for Group 1
 data RepoDataForProcessing = RepoDataForProcessing
     {
